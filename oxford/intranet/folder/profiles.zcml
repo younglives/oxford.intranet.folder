@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="oxford.intranet.folder">
+    
+  <genericsetup:registerProfile
+      name="default"
+      title="Oxford Intranet Folder"
+      directory="profiles/default"
+      description="An intranet folder for Oxford sites"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  
+</configure>

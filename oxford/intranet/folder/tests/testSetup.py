@@ -15,6 +15,10 @@ class TestInstallation(unittest.TestCase):
     def setUp(self):
         self.portal = self.layer['portal']
 
+    def testTypesInstalled(self):
+        portal_types = getToolByName(self.portal, 'portal_types')
+        assert 'IntranetFolder' in portal_types.objectIds(), portal_types.objectIds()
+
 class TestReinstall(unittest.TestCase):
     """Ensure product can be reinstalled safely"""
     layer = OXFORD_INTRANET_FOLDER_INTEGRATION_TESTING

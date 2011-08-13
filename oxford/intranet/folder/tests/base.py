@@ -11,7 +11,9 @@ class TestCase(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         # Load ZCML
         import oxford.intranet.folder
+        import Products.CMFPlacefulWorkflow
         self.loadZCML(package=oxford.intranet.folder)
+        self.loadZCML(package=Products.CMFPlacefulWorkflow)
 
         # Install product and call its initialize() function
         z2.installProduct(app, 'oxford.intranet.folder')

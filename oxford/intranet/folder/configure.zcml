@@ -6,5 +6,7 @@
   <five:registerPackage package="." initialize=".initialize" />
 
   <include file="profiles.zcml" />
+  <include package=".browser" />
+  <include package=".content" />
 
 </configure>

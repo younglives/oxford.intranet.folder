@@ -19,6 +19,9 @@ class TestInstallation(unittest.TestCase):
         portal_types = getToolByName(self.portal, 'portal_types')
         assert 'IntranetFolder' in portal_types.objectIds(), portal_types.objectIds()
 
+    def testPortalFactorySetup(self):
+        assert 'IntranetFolder' in self.portal.portal_factory.getFactoryTypes()
+
 class TestReinstall(unittest.TestCase):
     """Ensure product can be reinstalled safely"""
     layer = OXFORD_INTRANET_FOLDER_INTEGRATION_TESTING

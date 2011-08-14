@@ -6,6 +6,8 @@ from plone.app.folder.folder import ATFolder
 from Products.Archetypes.atapi import registerType
 from Products.CMFCore.permissions import ModifyPortalContent
 from Products.CMFCore.utils import getToolByName
+from Products.CMFPlacefulWorkflow.WorkflowPolicyConfig import WorkflowPolicyConfig
+from Products.CMFPlacefulWorkflow.PlacefulWorkflowTool import WorkflowPolicyConfig_id
 
 from oxford.intranet.folder.config import PROJECTNAME
 from oxford.intranet.folder.interfaces.intranetfolder import IIntranetFolder

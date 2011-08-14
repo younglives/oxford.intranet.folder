@@ -13,7 +13,14 @@
  <property name="global_allow">True</property>
  <property name="filter_content_types">True</property>
  <property name="allowed_content_types">
-  <element value="Academic"/>
+  <element value="Document"/>
+  <element value="Event"/>
+  <element value="File"/>
+  <element value="Folder"/>
+  <element value="Image"/>
+  <element value="News Item"/>
+  <element value="Audio"/>
+  <element value="Publication"/>
  </property>
  <property name="allow_discussion">False</property>
  <property name="default_view">base_view</property>

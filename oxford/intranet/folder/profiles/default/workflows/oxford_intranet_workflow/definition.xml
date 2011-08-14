@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <dc-workflow xmlns:i18n="http://xml.zope.org/namespaces/i18n"
              i18n:domain="plone"
-             workflow_id="intranet_workflow"
-             title="Intranet/Extranet Workflow"
+             workflow_id="oxford_intranet_workflow"
+             title="Oxford Intranet/Extranet Workflow"
              description="
 - An intranet workflow where content is only accessible if you are logged in.
 - Basic states are: Internal Draft, Pending Review, Internally Published and Private.

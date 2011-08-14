@@ -29,7 +29,6 @@
    <permission-role>Manager</permission-role>
    <permission-role>Owner</permission-role>
    <permission-role>Editor</permission-role>
-   <permission-role>Reader</permission-role>
    <permission-role>Contributor</permission-role>
    <permission-role>Reviewer</permission-role>
   </permission-map>
@@ -47,7 +46,6 @@
    <permission-role>Manager</permission-role>
    <permission-role>Owner</permission-role>
    <permission-role>Editor</permission-role>
-   <permission-role>Reader</permission-role>
    <permission-role>Contributor</permission-role>
    <permission-role>Reviewer</permission-role>
   </permission-map>
@@ -64,7 +62,6 @@
    <permission-role>Manager</permission-role>
    <permission-role>Owner</permission-role>
    <permission-role>Editor</permission-role>
-   <permission-role>Reader</permission-role>
    <permission-role>Contributor</permission-role>
   </permission-map>
   <permission-map name="Change portal events"
@@ -83,7 +80,6 @@
    <permission-role>Manager</permission-role>
    <permission-role>Owner</permission-role>
    <permission-role>Editor</permission-role>
-   <permission-role>Reader</permission-role>
    <permission-role>Contributor</permission-role>
   </permission-map>
  </state>

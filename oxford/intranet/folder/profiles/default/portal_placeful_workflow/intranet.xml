@@ -5,5 +5,8 @@
   <default>
    <bound-workflow workflow_id="intranet_workflow"/>
   </default>
+  <type type_id="IntranetFolder">
+   <bound-workflow workflow_id="intranet_folder_workflow"/>
+  </type>
  </bindings>
 </object>

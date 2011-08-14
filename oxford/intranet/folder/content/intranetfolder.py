@@ -27,6 +27,12 @@ class IntranetFolder(ATFolder):
     def canSetConstrainTypes(self):
         return True
 
+    def at_post_create(self):
+        self.applyLocalWorkflow()
+
+    def at_post_edit(self):
+        self.applyLocalWorkflow()
+
     security.declareProtected(ModifyPortalContent, 'applyLocalWorkflow')
     def applyLocalWorkflow(self):
         """

@@ -25,7 +25,7 @@ class IntranetFolder(ATFolder):
 
     security.declarePublic('canSetConstrainTypes')
     def canSetConstrainTypes(self):
-        return False
+        return True
 
     security.declareProtected(ModifyPortalContent, 'applyLocalWorkflow')
     def applyLocalWorkflow(self):

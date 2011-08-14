@@ -3,10 +3,16 @@
  <property name="title">Intranet</property>
  <bindings>
   <default>
-   <bound-workflow workflow_id="intranet_workflow"/>
+   <bound-workflow workflow_id="oxford_intranet_workflow"/>
   </default>
+  <type type_id="Folder">
+   <bound-workflow workflow_id="oxford_intranet_folder_workflow"/>
+  </type>
   <type type_id="IntranetFolder">
-   <bound-workflow workflow_id="intranet_folder_workflow"/>
+   <bound-workflow workflow_id="oxford_intranet_folder_workflow"/>
+  </type>
+  <type type_id="Topic">
+   <bound-workflow workflow_id="oxford_intranet_folder_workflow"/>
   </type>
  </bindings>
 </object>

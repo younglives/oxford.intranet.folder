@@ -1,11 +1,8 @@
-"""Main product initializer
-"""
-
 from zope.i18nmessageid import MessageFactory
 from oxford.intranet.folder import config
 
-from Products.Archetypes import atapi
-from Products.CMFCore import utils
+from Products.Archetypes.atapi import listTypes, process_types
+from Products.CMFCore.utils import ContentInit
 
 # Define a message factory for when this product is internationalised.
 # This will be imported with the special name "_" in most modules. Strings
@@ -25,8 +22,8 @@ def initialize(context):
 
     from content.intranetfolder import IntranetFolder
 
-    content_types, constructors, ftis = atapi.process_types(
-        atapi.listTypes(config.PROJECTNAME),
+    content_types, constructors, ftis = process_types(
+        listTypes(config.PROJECTNAME),
         config.PROJECTNAME)
 
     # Now initialize all these content types. The initialization process takes
@@ -37,7 +34,7 @@ def initialize(context):
     # in the GenericSetup profile.
 
     for atype, constructor in zip(content_types, constructors):
-        utils.ContentInit('%s: %s' % (config.PROJECTNAME, atype.portal_type),
+        ContentInit('%s: %s' % (config.PROJECTNAME, atype.portal_type),
             content_types=(atype, ),
             permission=config.ADD_PERMISSIONS[atype.portal_type],
             extra_constructors=(constructor,),

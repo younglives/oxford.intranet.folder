@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.1.0 - Unreleased
+------------------
+
+ - Add Site Administrator role to workflows
+
 1.0.0 - 2011/08/14
 ------------------
 

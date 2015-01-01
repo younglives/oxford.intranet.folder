@@ -2,11 +2,10 @@ import time
 import unittest2 as unittest
 from zExceptions import BadRequest
 
-from zope.component import getSiteManager
-
 from Products.CMFCore.utils import getToolByName
 
 from base import OXFORD_INTRANET_FOLDER_INTEGRATION_TESTING
+
 
 class TestInstallation(unittest.TestCase):
     """Ensure product is properly installed"""
@@ -17,10 +16,12 @@ class TestInstallation(unittest.TestCase):
 
     def testTypesInstalled(self):
         portal_types = getToolByName(self.portal, 'portal_types')
-        assert 'IntranetFolder' in portal_types.objectIds(), portal_types.objectIds()
+        assert 'IntranetFolder' in portal_types.objectIds(), \
+            portal_types.objectIds()
 
     def testPortalFactorySetup(self):
         assert 'IntranetFolder' in self.portal.portal_factory.getFactoryTypes()
+
 
 class TestReinstall(unittest.TestCase):
     """Ensure product can be reinstalled safely"""
@@ -32,8 +33,11 @@ class TestReinstall(unittest.TestCase):
     def testReinstall(self):
         portal_setup = getToolByName(self.portal, 'portal_setup')
         try:
-            portal_setup.runAllImportStepsFromProfile('profile-oxford.intranet.folder:default')
+            portal_setup.runAllImportStepsFromProfile(
+                'profile-oxford.intranet.folder:default')
         except BadRequest:
-            # if tests run too fast, duplicate profile import id makes test fail
+            # if tests run too fast,
+            # duplicate profile import id makes test fail
             time.sleep(0.5)
-            portal_setup.runAllImportStepsFromProfile('profile-oxford.intranet.folder:default')
+            portal_setup.runAllImportStepsFromProfile(
+                'profile-oxford.intranet.folder:default')

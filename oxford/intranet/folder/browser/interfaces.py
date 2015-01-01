@@ -1,5 +1,6 @@
 from plone.theme.interfaces import IDefaultPloneLayer
 
+
 class IOxfordIntranetFolder(IDefaultPloneLayer):
     """This interface is registered in profiles/default/browserlayer.xml,
     and is referenced in the 'layer' option of various browser resources.

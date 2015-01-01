@@ -6,13 +6,16 @@ from plone.app.folder.folder import ATFolder
 from Products.Archetypes.atapi import registerType
 from Products.CMFCore.permissions import ModifyPortalContent
 from Products.CMFCore.utils import getToolByName
-from Products.CMFPlacefulWorkflow.WorkflowPolicyConfig import WorkflowPolicyConfig
-from Products.CMFPlacefulWorkflow.PlacefulWorkflowTool import WorkflowPolicyConfig_id
+from Products.CMFPlacefulWorkflow.WorkflowPolicyConfig import \
+    WorkflowPolicyConfig
+from Products.CMFPlacefulWorkflow.PlacefulWorkflowTool import \
+    WorkflowPolicyConfig_id
 
 from oxford.intranet.folder.config import PROJECTNAME
 from oxford.intranet.folder.interfaces.intranetfolder import IIntranetFolder
 
 from schemata import IntranetFolderSchema
+
 
 class IntranetFolder(ATFolder):
     """A protected folder"""
@@ -27,6 +30,7 @@ class IntranetFolder(ATFolder):
     schema = IntranetFolderSchema
 
     security.declarePublic('canSetConstrainTypes')
+
     def canSetConstrainTypes(self):
         return True
 
@@ -37,14 +41,15 @@ class IntranetFolder(ATFolder):
         self.applyLocalWorkflow()
 
     security.declareProtected(ModifyPortalContent, 'applyLocalWorkflow')
+
     def applyLocalWorkflow(self):
         """
         Apply a local workflow policy to this intranet folder.
         """
-        placeful_workflow_tool = getToolByName(self, 'portal_placeful_workflow')
+        placeful_workflow = getToolByName(self, 'portal_placeful_workflow')
         if WorkflowPolicyConfig_id not in self.objectIds():
             new_policy_id = 'intranet'
-            policy = placeful_workflow_tool.getWorkflowPolicyById(new_policy_id)
+            policy = placeful_workflow.getWorkflowPolicyById(new_policy_id)
             if not policy:
                 return
             wf_config = WorkflowPolicyConfig(new_policy_id, new_policy_id)

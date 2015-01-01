@@ -4,6 +4,7 @@ from plone.app.testing import IntegrationTesting
 
 from plone.testing import z2
 
+
 class TestCase(PloneSandboxLayer):
 
     defaultBases = (PLONE_FIXTURE,)
@@ -35,4 +36,6 @@ class TestCase(PloneSandboxLayer):
         # style product
 
 OXFORD_INTRANET_FOLDER_FIXTURE = TestCase()
-OXFORD_INTRANET_FOLDER_INTEGRATION_TESTING = IntegrationTesting(bases=(OXFORD_INTRANET_FOLDER_FIXTURE,), name="OxfordIntranetFolder:Integration")
+OXFORD_INTRANET_FOLDER_INTEGRATION_TESTING = IntegrationTesting(
+    bases=(OXFORD_INTRANET_FOLDER_FIXTURE,),
+    name="OxfordIntranetFolder:Integration")

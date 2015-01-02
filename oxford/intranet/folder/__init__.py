@@ -21,7 +21,7 @@ def initialize(context):
     with Zope and the CMF.
     """
 
-    import content.intranetfolder.IntranetFolder  # noqa
+    from content.intranetfolder import IntranetFolder  # noqa
 
     content_types, constructors, ftis = process_types(
         listTypes(config.PROJECTNAME),

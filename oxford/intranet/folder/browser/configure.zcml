@@ -3,16 +3,4 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="oxford.intranet.folder">
 
-  <browser:resourceDirectory
-      name="oxford.intranet.folder.stylesheets"
-      directory="stylesheets"
-      layer=".interfaces.IOxfordIntranetFolder"
-      />
-
-  <browser:resourceDirectory
-      name="oxford.intranet.folder.images"
-      directory="images"
-      layer=".interfaces.IOxfordIntranetFolder"
-      />
-
 </configure>
